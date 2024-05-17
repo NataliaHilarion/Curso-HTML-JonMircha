@@ -8,6 +8,12 @@
   <title>Curso HTML</title>
   <!-- description - No mas de 165 caracteres - Para posicionamiento de la pag en la web -->
   <meta name="description" content="En esta pagina estoy aprendiendo los fundamentos de HTML con JonMircha" />
+  <link rel="stylesheet" href="assets/estilos.css">
+  <style>
+    h2{
+      color:orangered
+    }
+  </style>
 </head>
 
 <body>
@@ -16,8 +22,11 @@
       Alt + Shift + F = Indentar Codigo
     -->
   <h2>Introducción a HTML</h2>
-  <p>Primer comentario,este es un párrafo en HTML</p>
+  <p>
+    HTML (HyperText Markup Language) es el lenguaje estándar para crear y estructurar páginas web. Utiliza una serie de elementos y etiquetas que describen el contenido y la estructura de una página, como encabezados, párrafos, enlaces, imágenes, y formularios.
+  </p>
   <hr>
+
   <h2>Encabezados HTML</h2>
 
   <h1>Encabezados Nivel 1 - solo puede existir un h1 por HTML</h1>
@@ -56,6 +65,7 @@
   <hr>
 
   <h2>Etiquetas de saltos</h2>
+
   <ul>
     <li>hr: <em>Define una ruptura semántica entre bloques de texto - Horizontal Rule</em></li>
     <li>br: <em>salto de linea - Break</em></li>
@@ -80,7 +90,9 @@
     </code>
   </p>
   <hr>
+
   <h2>Etiquetas Semanticas Estructurales</h2>
+
   <ul>
     <li><b>Header</b> - Cabecera de un sitio web o de una seccion</li>
     <li><b>Main</b> - Define la sección principal del documento - <strong>Solo existe una por documento</strong></li>
@@ -91,9 +103,158 @@
     <li><b>Section</b> - Representa una seccion de contenido genérico</li>
     <li><b>Address</b> - Representa una infomarción de contacto</li>
   </ul>
+<hr>
+
+<h2>Etiquetas de Bloque vs Etiquetas de Linea</h2>
+
+<p>
+  En HTML, las etiquetas de bloque, como <b>div</b>, <b>p</b> y <b>header</b>, estructuran el contenido creando secciones que ocupan todo el ancho disponible y siempre comienzan en una nueva línea, organizando el layout de la página. Por otro lado, las etiquetas en línea, como <b>span</b>, <b>a</b> y <b>em</b>, se integran dentro del flujo del texto y sólo ocupan el espacio necesario, permitiendo estilizar partes específicas del contenido sin interrumpir el flujo
+</p>
+
+<div style="background-color: greenyellow;">La etiqueta de bloque por excelencia es la <b>div</b>, una etiqueta de bloque es aquella que genera saltos de linea con sus etiquetas hermanas</div>
+<span style="background-color: lightblue;">La etiqueta de linea por excelencia es la <b>span</b>, una etiqueta de linea solo ocupa el espacio necesario que tiene su contenido</span>
+<span>Hola soy otra span</span>
+<hr>
+
+<h2>Estilos CSS en HTML</h2>
+<p>
+  La etiqueta <strong>style</strong> en HTML se utiliza para definir estilos CSS internos directamente dentro de un documento HTML. Colocada generalmente dentro del <b>head</b>
+</p>
+<ol>
+  <li>Directamente en la etiqueta de HTML con el atributo <strong>style</strong></li>
+  <li>Abrir estilos en el HEAD del HTML con la etiqueta <strong>Style{}</strong> y ahí directamente agregar estilos</li>
+  <li>Enlazando una hoja de estilos con la etiqueta <strong>link rel="stylesheet" href="direccion de la .css"></strong> </li>
+</ol>
+<hr>
+
+<h2>Scripts en HTML</h2>
+<p>
+  La etiqueta <strong>script</strong> en HTML se utiliza para incorporar y ejecutar código JavaScript en una página web. Puede contener scripts internos escritos directamente dentro de la etiqueta o vincular archivos JavaScript externos mediante el atributo src
+</p>
+<ul>
+  <li>Con la etiqueta <strong>script</strong> directamente en el HTML al final del Body</li>
+  <li>Con la etiqueta script pero con el atributo src </li>
+</ul>
+<hr>
+
+<h2>Imagenes</h2>
+<p>
+  La etiqueta <strong>img</strong> en HTML se utiliza para incorporar imágenes en una página web. Es un elemento vacío, lo que significa que no tiene una etiqueta de cierre y se define mediante atributos como src <b>source</b> para especificar la URL de la imagen, y alt (alternate text) para proporcionar una descripción alternativa de la imagen
+</p>
+<img src="img/tabla-periodica-elementos-HTML.png" alt="tabla-periodica-elementos-HTML">
+<hr>
+
+<h2>SVG - vectores</h2>
+<p>
+  SVG <b>Scalable Vector Graphics</b> es un formato de imagen basado en XML que se utiliza para definir gráficos vectoriales bidimensionales en HTML. A diferencia de las imágenes rasterizadas, como JPEG o PNG, SVG puede escalarse a cualquier tamaño sin pérdida de calidad, lo que lo hace ideal para gráficos en la web que necesitan ser responsivos. Además, SVG permite la manipulación a través de CSS y JavaScript, facilitando la creación de gráficos interactivos y animaciones. Al ser un estándar abierto, es ampliamente compatible con la mayoría de los navegadores modernos.
+</p>
+<img src="img/youtube.svg" alt="logo-youtube">
+<svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M9.19795 21.5H13.198V13.4901H16.8021L17.198 9.50977H13.198V7.5C13.198 6.94772 13.6457 6.5 14.198 6.5H17.198V2.5H14.198C11.4365 2.5 9.19795 4.73858 9.19795 7.5V9.50977H7.19795L6.80206 13.4901H9.19795V21.5Z"
+    fill="currentColor"
+  />
+</svg>
+<hr>
+
+<h2>Figuras</h2>
+<p>
+  La etiqueta <strong>Figure</strong> en HTML se utiliza para encapsular contenido visual como imágenes, gráficos, diagramas o fragmentos de código, junto con su correspondiente leyenda. Esta leyenda se define mediante la etiqueta <strong>Figcaption</strong>
+</p>
+<figure>
+  <img src="img/tabla-periodica-elementos-HTML.png" alt="tabla-periodica-elementos-HTML">
+  <figcaption>Tabla de los Elementos HTML</figcaption>
+</figure>
+<hr>
+
+<h2>Listas</h2>
+<p>
+  Las listas en HTML permiten organizar información en forma de ítems secuenciales o desordenados. Existen tres tipos principales de listas: las listas no ordenadas <b>ul</b> - Unorder list, que presentan los ítems con viñetas; las listas ordenadas <b>ol</b> - Order List, que enumeran los ítems con números; y las listas de definición <b>dl</b> - Definition List, que se usan para términos y sus descripciones. Los elementos individuales de una lista se definen con la etiqueta <b>li</b> en el caso de listas ordenadas y no ordenadas, y con <b>dt</b> (definition term) y <b>dd</b> (description data) en el caso de listas de definición. Estas estructuras son fundamentales para mejorar la organización y legibilidad del contenido en una página web.
+</p>
+
+<h3>Listas Ordenadas</h3>
+<ol>
+  <li>Primavera</li>
+  <li>Verano</li>
+  <li>Otoño</li>
+  <li>Invierno</li>
+</ol>
+
+<p>Con el atributo <b>start</b></p>
+<ol start="10">
+  <li>Primavera</li>
+  <li>Verano</li>
+  <li>Otoño</li>
+  <li>Invierno</li>
+</ol>
+
+<p>Con el atributo boolenao <b>reversed</b></p>
+<ol reversed>
+  <li>Primavera</li>
+  <li>Verano</li>
+  <li>Otoño</li>
+  <li>Invierno</li>
+</ol>
+
+<p>Con el atributo <b>type</b></p>
+<ol type="I">
+  <li>Primavera</li>
+  <li>Verano</li>
+  <li>Otoño</li>
+  <li>Invierno</li>
+</ol>
+
+<h3>Listas Desordenadas</h3>
+
+<ul>
+  <li>Abrir HMTL</li>
+  <li>Crear un archivo CSS</li>
+  <li>Crear un archivo JS</li>
+  <li>Con las etiquetas script y link agrega los archivos js y css al HTML</li>
+</ul>
+
+<ul type="circle">
+  <li>Abrir HMTL</li>
+  <li>Crear un archivo CSS</li>
+  <li>Crear un archivo JS</li>
+  <li>Con las etiquetas script y link agrega los archivos js y css al HTML</li>
+</ul>
+
+<ul type="square">
+  <li>Abrir HMTL</li>
+  <li>Crear un archivo CSS</li>
+  <li>Crear un archivo JS</li>
+  <li>Con las etiquetas script y link agrega los archivos js y css al HTML</li>
+</ul>
+
+<h3>Listas de Definición</h3>
+<dl>
+  <dt>HTML</dt>
+  <dd>Hyper Text Market Language - Lenguaje de marcado que define el contenido de la web</dd>
+  <dt>CSS</dt>
+  <dd>Cascading Style Sheets - Lenguaje de definicion que da estilos al codigo HTML</dd>
+  <dt>JavaScript</dt>
+  <dd> Lenguaje de la Web</dd>
+</dl>
 
 
 
+
+
+
+
+
+
+<script>
+  console.log("Hola desde el mismo HTML console.log")
+</script>
+<script src="assets/codigos.js"></script>
 </body>
 
 </html>
