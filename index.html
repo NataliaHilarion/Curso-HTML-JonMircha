@@ -21,13 +21,34 @@
       ALt + Shift + A = Comentar codigo
       Alt + Shift + F = Indentar Codigo
     -->
-  <h2>Introducción a HTML</h2>
+  <h2 id="inicio">Introducción a HTML</h2>
   <p>
     HTML (HyperText Markup Language) es el lenguaje estándar para crear y estructurar páginas web. Utiliza una serie de elementos y etiquetas que describen el contenido y la estructura de una página, como encabezados, párrafos, enlaces, imágenes, y formularios.
   </p>
+  <h3>Temario</h3>
+  <ul>
+    <li><a href="#encabezados">Encabezados HTML</a></li>
+    <li><a href="#etiquetas-basica">Etiquetas de texto Básicas</a></li>
+    <li><a href="#etiquetas-semanticas">Etiquetas de texto Semanticas</a></li>
+    <li><a href="#etiquetas-saltos">Etiquetas de saltos</a></li>
+    <li><a href="#etiquetas-formateo">Etiquetas de Formateo</a></li>
+    <li><a href="#etiquetas-estructurales">Etiquetas Semanticas Estructurales</a></li>
+    <li><a href="#etiquetas-bloque">Etiquetas de Bloque vs Etiquetas de Linea</a></li>
+    <li><a href="#estilos-css">Estilos CSS en HTML </a></li>
+    <li><a href="#script-html">Scripts en HTML </a></li>
+    <li><a href="#imagenes">Imagenes </a></li>
+    <li><a href="#vectores">SVG - vectores </a></li>
+    <li><a href="#figuras">Figuras </a></li>
+    <li><a href="#listas-ordenadas">Listas Ordenadas </a></li>
+    <li><a href="#listas-desordenadas">Listas Desordenadas </a></li>
+    <li><a href="#tablas">Tablas </a></li>
+    <li><a href="#enlaces">Enlaces</a></li>
+    <li><a href="#enlaces-internos">Enlaces Internos </a></li>
+    <li><a href=""> </a></li>
+  </ul>
   <hr>
 
-  <h2>Encabezados HTML</h2>
+  <h2 id="encabezados">Encabezados HTML</h2>
 
   <h1>Encabezados Nivel 1 - solo puede existir un h1 por HTML</h1>
   <h2>Encabezados Nivel 2</h2>
@@ -35,9 +56,10 @@
   <h4>Encabezados Nivel 4</h4>
   <h5>Encabezados Nivel 5</h5>
   <h6>Encabezados Nivel 6</h6>
+  <a href="#inicio">⬆️<small>Inicio</small></a>
   <hr>
 
-  <h2>Etiquetas de texto Básicas</h2>
+  <h2 id="etiquetas-basica">Etiquetas de texto Básicas</h2>
 
   <ul>
     <li>Negrita: <b>negrita</b> </li>
@@ -48,9 +70,9 @@
     <li>Marca de Texto:<mark>marca de texto</mark> </li>
     <li>Letra Chica:<small>todos los derechos reservados</small></li>
   </ul>
-
+  <a href="#inicio">⬆️<small>Inicio</small></a>
   <hr>
-  <h2>Etiquetas de texto Semanticas</h2>
+  <h2 id="etiquetas-semanticas">Etiquetas de texto Semanticas</h2>
 
   <ul>
     <li>Strong: <strong>Este texto es importante</strong></li>
@@ -61,18 +83,18 @@
     </li>
     <li>Cite: <cite>Socrates</cite></li>
   </ul>
-
+  <a href="#inicio">⬆️<small>Inicio</small></a>
   <hr>
 
-  <h2>Etiquetas de saltos</h2>
+  <h2 id="etiquetas-saltos">Etiquetas de saltos</h2>
 
   <ul>
     <li>hr: <em>Define una ruptura semántica entre bloques de texto - Horizontal Rule</em></li>
     <li>br: <em>salto de linea - Break</em></li>
   </ul>
-
+  <a href="#inicio">⬆️<small>Inicio</small></a>
   <hr>
-  <h2>Etiquetas de Formateo</h2>
+  <h2 id="etiquetas-formateo">Etiquetas de Formateo</h2>
   <p>
     Tareas por Hacer:
     <pre>
@@ -89,9 +111,10 @@
       Este texto esta en formato codigo, con la etiqueta: <strong>code</strong>
     </code>
   </p>
+  <a href="#inicio">⬆️<small>Inicio</small></a>
   <hr>
 
-  <h2>Etiquetas Semanticas Estructurales</h2>
+  <h2 id="etiquetas-estructurales">Etiquetas Semanticas Estructurales</h2>
 
   <ul>
     <li><b>Header</b> - Cabecera de un sitio web o de una seccion</li>
@@ -103,9 +126,9 @@
     <li><b>Section</b> - Representa una seccion de contenido genérico</li>
     <li><b>Address</b> - Representa una infomarción de contacto</li>
   </ul>
+  <a href="#inicio">⬆️<small>Inicio</small></a>
 <hr>
-
-<h2>Etiquetas de Bloque vs Etiquetas de Linea</h2>
+<h2 id="etiquetas-bloque">Etiquetas de Bloque vs Etiquetas de Linea</h2>
 
 <p>
   En HTML, las etiquetas de bloque, como <b>div</b>, <b>p</b> y <b>header</b>, estructuran el contenido creando secciones que ocupan todo el ancho disponible y siempre comienzan en una nueva línea, organizando el layout de la página. Por otro lado, las etiquetas en línea, como <b>span</b>, <b>a</b> y <b>em</b>, se integran dentro del flujo del texto y sólo ocupan el espacio necesario, permitiendo estilizar partes específicas del contenido sin interrumpir el flujo
@@ -113,10 +136,11 @@
 
 <div style="background-color: greenyellow;">La etiqueta de bloque por excelencia es la <b>div</b>, una etiqueta de bloque es aquella que genera saltos de linea con sus etiquetas hermanas</div>
 <span style="background-color: lightblue;">La etiqueta de linea por excelencia es la <b>span</b>, una etiqueta de linea solo ocupa el espacio necesario que tiene su contenido</span>
-<span>Hola soy otra span</span>
+<span>Hola soy otra span</span><br>
+<a href="#inicio">⬆️<small>Inicio</small></a>
 <hr>
 
-<h2>Estilos CSS en HTML</h2>
+<h2 id="estilos-css">Estilos CSS en HTML</h2>
 <p>
   La etiqueta <strong>style</strong> en HTML se utiliza para definir estilos CSS internos directamente dentro de un documento HTML. Colocada generalmente dentro del <b>head</b>
 </p>
@@ -125,9 +149,10 @@
   <li>Abrir estilos en el HEAD del HTML con la etiqueta <strong>Style{}</strong> y ahí directamente agregar estilos</li>
   <li>Enlazando una hoja de estilos con la etiqueta <strong>link rel="stylesheet" href="direccion de la .css"></strong> </li>
 </ol>
+<a href="#inicio">⬆️<small>Inicio</small></a>
 <hr>
 
-<h2>Scripts en HTML</h2>
+<h2 id="script-html">Scripts en HTML</h2>
 <p>
   La etiqueta <strong>script</strong> en HTML se utiliza para incorporar y ejecutar código JavaScript en una página web. Puede contener scripts internos escritos directamente dentro de la etiqueta o vincular archivos JavaScript externos mediante el atributo src
 </p>
@@ -135,16 +160,18 @@
   <li>Con la etiqueta <strong>script</strong> directamente en el HTML al final del Body</li>
   <li>Con la etiqueta script pero con el atributo src </li>
 </ul>
+<a href="#inicio">⬆️<small>Inicio</small></a>
 <hr>
 
-<h2>Imagenes</h2>
+<h2 id="imagenes">Imagenes</h2>
 <p>
-  La etiqueta <strong>img</strong> en HTML se utiliza para incorporar imágenes en una página web. Es un elemento vacío, lo que significa que no tiene una etiqueta de cierre y se define mediante atributos como src <b>source</b> para especificar la URL de la imagen, y alt (alternate text) para proporcionar una descripción alternativa de la imagen
+  La etiqueta <strong>img</strong> en HTML se utiliza para incorporar imágenes en una página web. Es un elemento vacío, lo que significa que no tiene una etiqueta de cierre y se define mediante atributos como src <b>source</b> para especificar la URL de la imagen, y <b>alt (alternate text)</b> para proporcionar una descripción alternativa de la imagen. La etiqueta <b>Title</b> para que agregue nombre al pasar el cursor sobre la imagen.
 </p>
-<img src="img/tabla-periodica-elementos-HTML.png" alt="tabla-periodica-elementos-HTML">
+<img src="img/tabla-periodica-elementos-HTML.png" alt="tabla-periodica-elementos-HTML"> <br>
+<a href="#inicio">⬆️<small>Inicio</small></a>
 <hr>
 
-<h2>SVG - vectores</h2>
+<h2 id="vectores">SVG - vectores</h2>
 <p>
   SVG <b>Scalable Vector Graphics</b> es un formato de imagen basado en XML que se utiliza para definir gráficos vectoriales bidimensionales en HTML. A diferencia de las imágenes rasterizadas, como JPEG o PNG, SVG puede escalarse a cualquier tamaño sin pérdida de calidad, lo que lo hace ideal para gráficos en la web que necesitan ser responsivos. Además, SVG permite la manipulación a través de CSS y JavaScript, facilitando la creación de gráficos interactivos y animaciones. Al ser un estándar abierto, es ampliamente compatible con la mayoría de los navegadores modernos.
 </p>
@@ -160,23 +187,26 @@
     d="M9.19795 21.5H13.198V13.4901H16.8021L17.198 9.50977H13.198V7.5C13.198 6.94772 13.6457 6.5 14.198 6.5H17.198V2.5H14.198C11.4365 2.5 9.19795 4.73858 9.19795 7.5V9.50977H7.19795L6.80206 13.4901H9.19795V21.5Z"
     fill="currentColor"
   />
-</svg>
+</svg><br>
+<a href="#inicio">⬆️<small>Inicio</small></a>
 <hr>
 
-<h2>Figuras</h2>
+<h2 id="figuras">Figuras</h2>
 <p>
   La etiqueta <strong>Figure</strong> en HTML se utiliza para encapsular contenido visual como imágenes, gráficos, diagramas o fragmentos de código, junto con su correspondiente leyenda. Esta leyenda se define mediante la etiqueta <strong>Figcaption</strong>
 </p>
 <figure>
   <img src="img/tabla-periodica-elementos-HTML.png" alt="tabla-periodica-elementos-HTML">
   <figcaption>Tabla de los Elementos HTML</figcaption>
-</figure>
+</figure><br>
+<a href="#inicio">⬆️<small>Inicio</small></a>
 <hr>
 
-<h2>Listas</h2>
+<h2 id="listas-ordenadas">Listas</h2>
 <p>
   Las listas en HTML permiten organizar información en forma de ítems secuenciales o desordenados. Existen tres tipos principales de listas: las listas no ordenadas <b>ul</b> - Unorder list, que presentan los ítems con viñetas; las listas ordenadas <b>ol</b> - Order List, que enumeran los ítems con números; y las listas de definición <b>dl</b> - Definition List, que se usan para términos y sus descripciones. Los elementos individuales de una lista se definen con la etiqueta <b>li</b> en el caso de listas ordenadas y no ordenadas, y con <b>dt</b> (definition term) y <b>dd</b> (description data) en el caso de listas de definición. Estas estructuras son fundamentales para mejorar la organización y legibilidad del contenido en una página web.
 </p>
+
 
 <h3>Listas Ordenadas</h3>
 <ol>
@@ -209,8 +239,8 @@
   <li>Otoño</li>
   <li>Invierno</li>
 </ol>
-
-<h3>Listas Desordenadas</h3>
+<a href="#inicio">⬆️<small>Inicio</small></a>
+<h3 id="listas-desordenadas">Listas Desordenadas</h3>
 
 <ul>
   <li>Abrir HMTL</li>
@@ -232,7 +262,7 @@
   <li>Crear un archivo JS</li>
   <li>Con las etiquetas script y link agrega los archivos js y css al HTML</li>
 </ul>
-
+<a href="#inicio">⬆️<small>Inicio</small></a>
 <h3>Listas de Definición</h3>
 <dl>
   <dt>HTML</dt>
@@ -242,11 +272,119 @@
   <dt>JavaScript</dt>
   <dd> Lenguaje de la Web</dd>
 </dl>
+<hr>
+<h2 id="tablas">Tablas</h2>
+<p>Para tabular datos - la etiqueta para la tabla es <b>Table</b>, Para definir la fila: <b>Tr = Table row</b>, Para definir las columnas <b>Td = Table Data</b></p>
+<table>
+  <tr>
+    <td>Equipo</td>
+    <td>Pais</td>
+    <td>Ciudad</td>
+  </tr>
+  <tr>
+    <td>Real Madrid</td>
+    <td>España</td>
+    <td>Madrid</td>
+  </tr>
+  <tr>
+    <td>Arsenal</td>
+    <td>Inglaterra</td>
+    <td>Londres</td>
+  </tr>
+  <tr>
+    <td>juventus</td>
+    <td>Italia</td>
+    <td>Turin</td>
+  </tr>
+</table>
+<br><br><br>
+<table>
+  <thead>
+    <tr>
+      <th colspan="3">Equipos de Futbol</th>
+    </tr>
+    <tr>
+      <th>Equipo</th>
+      <th>Pais</th>
+      <th>Ciudad</th>
+    </tr>
+  </thead>
+  <tBody>
+    <tr>
+      <td>Real Madrid</td>
+      <td>España</td>
+      <td>Madrid</td>
+    </tr>
+    <tr>
+      <td>Bayer</td>
+      <td>Alemania</td>
+      <td>Munich</td>
+    </tr>
+    <tr>
+    <tr>
+      <td>Juventus</td>
+      <td>Italia</td>
+      <td>Turin</td>
+    </tr>
+    <tr>
+      <td>Arsenal</td>
+      <td rowspan="2">Inglaterra</td>
+      <td>Londres</td>
+    </tr>
+    <tr>
+      <td>Aston Villa</td>
+      <td>Birmingham</td>
+    </tr>
+  </tBody>
+  <tfoot>
+    <th colspan="3"><small>Equipos de los Principales Paises de Europa</small> </th>
+  </tfoot>
+</table>
+<a href="#inicio">⬆️<small>Inicio</small></a>
+<hr>
+<h2 id="enlaces">Enlaces</h2>
+<p>En HTML, la etiqueta <b>a</b> se utiliza para crear hipervínculos, permitiendo a los usuarios navegar entre distintas páginas web. Dentro de esta etiqueta, se especifica la dirección URL a la que el enlace debe dirigir, utilizando el atributo <b>href</b>.</p>
+<p>
+  Revisa este link para revisar etiquetas de HTML
+  <a href="https://htmlreference.io/" target="_blank" rel="nofollow">HTML Reference</a>
+</p>
+<p>
+  Profundiza en HTML en la pág de JonMircha
+  <a href="https://jonmircha.com" target="_blank" rel="nofollow">JonMircha </a>
+</p>
+<a href="https://jonmircha.com" target="_blank">
+  <img src="/img/fox.svg" alt="Ir a jonmircha" alt="Pag JonMircha" title="jonmircha.com" id="fox">
+</a><br>
+<a href="#inicio">⬆️<small>Inicio</small></a>
+<hr>
+<h2 id="enlaces-internos">Enlaces Internos</h2>
+<p>
+  Los enlaces internos en HTML te permiten navegar a diferentes secciones dentro de la misma página. Para crear enlaces internos, utilizas el atributo id en el elemento de destino y el atributo href en el enlace que apunta a ese destino.
+</p>
+<pre>
+  <code>
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#seccion1&quot;&gt;Ir a Sección 1&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h2 id=&quot;seccion1&quot;&gt;Sección 1&lt;/h2&gt;
+  &lt;p&gt;Contenido de la Sección 1...&lt;/p&gt;
+  </code>
+
+</pre>
+<a href="mailto:hola@gmail.com">Enlace a Correo Electronico</a>
+<br>
+<a href="tel:5710000000">Enlace a Telefono</a>
+<br>
+<a href="https://api.Whatsapp.com/send?phone=31400000000&text=Bienvenidos a mi whatsapp" target="_blank">Enlace a Whatsapp</a>
+<br>
+<a href="#inicio">⬆️<small>Inicio</small></a>
 
 
 
 
 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 

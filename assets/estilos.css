@@ -1,3 +1,8 @@
+html{
+  scroll-behavior: smooth;
+}
+
+
 body{
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -15,3 +20,31 @@ h3{
   color: rgb(237, 102, 30);
   text-decoration: underline;
 }
+
+#fox{
+  max-width: 200px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  /* Mantener la proporción de aspecto */
+}
+
+pre {
+  background-color: #0f0e0e;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+  color: aliceblue;
+  /* Permite el desplazamiento horizontal */
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  color: #eaf0ef;
+  /* Color para el texto del código */
+}
+
+pre a{
+  color: blue;
+}
+
