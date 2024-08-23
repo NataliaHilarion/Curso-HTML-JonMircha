@@ -46,6 +46,8 @@
     <li><a href="#enlaces-internos">Enlaces Internos </a></li>
     <li><a href="#elementos-interactivos"> Elementos Interactivos</a></li>
     <li><a href="#audio-video"> Etiquetas de Audio y Video</a></li>
+    <li><a href="#iframe"> Etiqueta Iframe</a></li>
+    <li><a href="#formularios"> Formularios</a></li>
   </ul>
   <hr>
 
@@ -413,12 +415,64 @@
 <a href="#inicio">⬆️<small>Inicio</small></a>
 <hr>
 <h2 id="audio-video">Etiquetas de Audio y Video</h2>
-<audio src="media/audio.mp3" controls></audio>
+<p>Las etiquetas <strong>Audio</strong> y <strong>Video</strong> en HTML se utilizan para incrustar archivos de audio y video directamente en una página web sin necesidad de plugins externos</p>
+<h3>Atributos Principales:</h3>
+<ol>
+  <li><strong>Src</strong>: Especifica la URL del archivo de audio que se va a reproducir. Este es el atributo principal si no se utilizan elementos <source> anidados.</li>
+  <li><strong>Controls</strong>: Agrega controles predeterminados para el audio, como reproducir, pausar y ajustar el volumen, permitiendo la interacción del usuario.</li>
+  <li><strong>Autoplay</strong>: Hace que el audio se reproduzca automáticamente cuando la página se carga, aunque su uso debe ser cuidadoso, ya que puede resultar molesto para los usuarios.</li>
+  <li><strong>Loop</strong>: Hace que el audio se repita en bucle continuo una vez que termina, sin necesidad de intervención manual.</li>
+  <li><strong>Preload</strong>: Indica al navegador cómo manejar la precarga del archivo de audio. Puede tomar valores como auto (precarga automática), metadata (solo metadatos), o none (no precargar), afectando el rendimiento y el tiempo de carga.</li>
+</ol>
+<audio src="media/audio.mp3" controls preload="auto"></audio>
 <br>
-<video src="media/video.mp4" autoplay controls width="300" height="300"></video>
+<video src="media/video.mp4" poster="img/imagenFondoVideos.jpg" controls preload ></video>
 <br>
 <a href="#inicio">⬆️<small>Inicio</small></a>
 <hr>
+<h2 id="iframe">Iframe</h2>
+<p>No se recomienda usar la etiqueta <strong>iframe</strong>  en HTML porque puede presentar problemas de seguridad, como vulnerabilidades de clickjacking, y afectar negativamente el rendimiento del sitio web al aumentar el tiempo de carga. Además, los <strong>iframe</strong> pueden dificultar la accesibilidad y el SEO, ya que el contenido dentro del <strong>iframe</strong> no es fácilmente indexable por los motores de búsqueda, y puede no ser completamente accesible para tecnologías de asistencia, como los lectores de pantalla</p>
+<p>
+  Se puede usar tambien para agregar pdf, google maps o videos en YouTube. Pero <strong>No es recomendable tener mas de un Iframe en HTML</strong>
+</p>
+<iframe src="hola.html" frameborder="1"></iframe>
+<br>
+<iframe src="media/keyboard-shortcuts-windows.pdf" frameborder="0"></iframe>
+<br>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15907.739723882247!2d-74.06582525949553!3d4.605672675903191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99bfd2a459a9%3A0x352a5134b65e607b!2sMonserrate!5e0!3m2!1ses-419!2sco!4v1724385036282!5m2!1ses-419!2sco"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<br>
+<a href="#inicio">⬆️<small>Inicio</small></a>
+<hr>
+<h2 id="formularios">Formularios</h2>
+<h3>Elementos de Formulario</h3>
+<h4>Clases de Input</h4>
+<ul>
+  <li> Tipo Texto: <input type="text"> </li>
+  <li> Tipo Checkbox: <input type="checkbox"> </li>
+  <li> Tipo Radio: <input type="radio"> </li>
+  <li> Tipo Date: <input type="date"> </li>
+  <li> Tipo Color: <input type="color"> </li>
+  <li> Tipo Button: <input type="button" value="Tipo boton"></li>
+  <li> Tipo Submit: <input type="submit"> </li>
+  <li> Tipo Reset: <input type="reset"> </li>
+  <li> Tipo File: <input type="file"> </li>
+  <li> Tipo File con atributo multiple: <input type="file" multiple> </li>
+  <li> Tipo Oculto (Hidden): <input type="hidden" name="idioma" value="es"> </li>
+  <li> Tipo Email: <input type="email" placeholder="ejemplo@gmail.com"> </li>
+  <li> Tipo Number: <input type="number" > </li>
+  <li> Tipo Tel: <input type="tel" > </li>
+
+
+</ul>
+
+
+<br>
+<a href="#inicio">⬆️<small>Inicio</small></a>
+<hr>
+
+
+
+
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 

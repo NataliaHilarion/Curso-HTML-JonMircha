@@ -7,7 +7,8 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-img{
+img,
+video{
   max-width: 80%;
   height: auto;
 }
@@ -21,6 +22,10 @@ h3{
   text-decoration: underline;
 }
 
+h4{
+  color: rgb(237, 122, 61);
+}
+
 #fox{
   max-width: 200px;
   max-height: 100px;
@@ -31,11 +36,22 @@ h3{
 
 pre {
   background-color: #0f0e0e;
-  padding: 10px;
   border-radius: 5px;
-  overflow-x: auto;
   color: aliceblue;
   /* Permite el desplazamiento horizontal */
+  height: auto;
+  white-space: pre-wrap;
+    /* Ajusta el texto automáticamente al ancho del contenedor */
+  word-wrap: break-word;
+    /* Permite que las palabras largas se ajusten a la línea */
+  overflow-x: auto;
+    /* Agrega un scroll horizontal si el contenido es más ancho que el contenedor */
+  max-width: 100%;
+    /* Se asegura de que el <pre> no exceda el ancho del contenedor padre */
+  box-sizing: border-box;
+    /* Incluye el padding y el borde en el ancho total */
+  padding: 10px;
+    /* Espaciado interno para que el contenido no toque los bordes */
 }
 
 code {
@@ -48,3 +64,14 @@ pre a{
   color: blue;
 }
 
+iframe{
+  width: 80%;
+  height: 400px;
+  margin-top: 3px;
+  border: 1px solid rgb(35, 66, 151);
+  border-radius: 7px;
+}
+
+input{
+  margin-top: 3px;
+}
