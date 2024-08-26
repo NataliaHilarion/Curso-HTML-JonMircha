@@ -38,7 +38,6 @@ pre {
   background-color: #0f0e0e;
   border-radius: 5px;
   color: aliceblue;
-  /* Permite el desplazamiento horizontal */
   height: auto;
   white-space: pre-wrap;
     /* Ajusta el texto automáticamente al ancho del contenedor */
@@ -46,7 +45,7 @@ pre {
     /* Permite que las palabras largas se ajusten a la línea */
   overflow-x: auto;
     /* Agrega un scroll horizontal si el contenido es más ancho que el contenedor */
-  max-width: 100%;
+  max-width: 50%;
     /* Se asegura de que el <pre> no exceda el ancho del contenedor padre */
   box-sizing: border-box;
     /* Incluye el padding y el borde en el ancho total */

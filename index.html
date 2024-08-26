@@ -26,7 +26,7 @@
     HTML (HyperText Markup Language) es el lenguaje estándar para crear y estructurar páginas web. Utiliza una serie de elementos y etiquetas que describen el contenido y la estructura de una página, como encabezados, párrafos, enlaces, imágenes, y formularios.
   </p>
   <h3>Temario</h3>
-  <ul>
+  <ul type="square">
     <li><a href="#encabezados">Encabezados HTML</a></li>
     <li><a href="#etiquetas-basica">Etiquetas de texto Básicas</a></li>
     <li><a href="#etiquetas-semanticas">Etiquetas de texto Semanticas</a></li>
@@ -47,7 +47,8 @@
     <li><a href="#elementos-interactivos"> Elementos Interactivos</a></li>
     <li><a href="#audio-video"> Etiquetas de Audio y Video</a></li>
     <li><a href="#iframe"> Etiqueta Iframe</a></li>
-    <li><a href="#formularios"> Formularios</a></li>
+    <li><a href="#elementos-formulario"> Elementos de Formularios </a></li>
+    <li><a href="#formulario">Formularios </a></li>
   </ul>
   <hr>
 
@@ -278,6 +279,23 @@
 <hr>
 <h2 id="tablas">Tablas</h2>
 <p>Para tabular datos - la etiqueta para la tabla es <b>Table</b>, Para definir la fila: <b>Tr = Table row</b>, Para definir las columnas <b>Td = Table Data</b></p>
+<pre>
+  <code>
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Equipo&lt;/td&gt;
+      &lt;td&gt;Pais&lt;/td&gt;
+      &lt;td&gt;Ciudad&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Real Madrid&lt;/td&gt;
+      &lt;td&gt;España&lt;/td&gt;
+      &lt;td&gt;Madrid&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;
+  </code>
+</pre>
+
 <table>
   <tr>
     <td>Equipo</td>
@@ -301,6 +319,7 @@
   </tr>
 </table>
 <br><br><br>
+
 <table>
   <thead>
     <tr>
@@ -443,11 +462,10 @@
 <br>
 <a href="#inicio">⬆️<small>Inicio</small></a>
 <hr>
-<h2 id="formularios">Formularios</h2>
-<h3>Elementos de Formulario</h3>
-<h4>Clases de Input</h4>
-<ul>
-  <li> Tipo Texto: <input type="text"> </li>
+<h2 id="elementos-formulario"> Elementos de Formularios</h2>
+<h3>Clases de Input</h3>
+<ul type="square" >
+  <li> Tipo Text: <input type="text"> </li>
   <li> Tipo Checkbox: <input type="checkbox"> </li>
   <li> Tipo Radio: <input type="radio"> </li>
   <li> Tipo Date: <input type="date"> </li>
@@ -457,21 +475,129 @@
   <li> Tipo Reset: <input type="reset"> </li>
   <li> Tipo File: <input type="file"> </li>
   <li> Tipo File con atributo multiple: <input type="file" multiple> </li>
-  <li> Tipo Oculto (Hidden): <input type="hidden" name="idioma" value="es"> </li>
+  <li> Tipo Hidden: <input type="hidden" name="idioma" value="es"> </li>
   <li> Tipo Email: <input type="email" placeholder="ejemplo@gmail.com"> </li>
   <li> Tipo Number: <input type="number" > </li>
-  <li> Tipo Tel: <input type="tel" > </li>
-
-
+  <li> Tipo Telephone: <input type="tel" > </li>
+  <li> Tipo Password: <input type="password" > </li>
+  <li> Tipo Search: <input type="search" > </li>
 </ul>
-
-
-<br>
+<h3>Atributos Importantes</h3>
+<ul>
+  <li> Readonly: <input type="text" readonly value="solo es para leer"> </li>
+  <li> Disabled: <input type="text" readonly value="grisecito" disabled> </li>
+  <li> Placeholder: <input type="text" placeholder="escribe tu nombre"> </li>
+  <li> Required: <input type="text" required> </li>
+  <li> Pattern - Definir una expresión regular: <input type="text" pattern="^[A-Za-z]+$"> </li>
+  <li> Title - Proporciona información adicional sobre el elemento: <input type="text" pattern="^[A-Za-z]+$" title="solo acepta letras"> </li>
+  <li> Autocomplete (on/off) - Valores previamente ingresados: <input type="text" required autocomplete="on"> </li>
+</ul>
+<h3>TextArea</h3>
+<textarea name="" id="" cols="30" rows="10" ></textarea><br>
+<h3>Select</h3>
+<ul type="circle">
+  <li>
+    Select normal:
+    <select name="" id="">
+      <option value="">HTML</option>
+      <option value="">CSS</option>
+      <option value="">JavaScript</option>
+    </select>
+  </li><br>
+  <li>
+    Select Atributo multiple:
+    <select multiple name="" id="">
+      <option value="">HTML</option>
+      <option value="">CSS</option>
+      <option value="">JavaScript</option>
+      <option value="">PHP</option>
+      <option value="">Python</option>
+    </select>
+  </li>
+</ul>
+<br><br>
 <a href="#inicio">⬆️<small>Inicio</small></a>
 <hr>
+<h2 id="formulario">Formularios</h2>
+<!--https://jonmircha.com/?usuario=natalia&password=natillapilla -->
+<!--autocomplete: No guarda los valores anteriores que se escribieron en el input -->
+<form action="#" autocomplete="off">
+  <label for="user">Usuario: </label><input id="user" type="text" name="usuario" placeholder="Escribe tu usuario" required pattern="^[A-Za-z]+$" title="el campo solo acepta letras">
+  <br>
+  <label for="password">Password: </label><input id="password" type="password" name="password" placeholder="Password" required>
+  <br>
+  <label for="">Email: </label> <input type="email" >
+  <br>
+  <input type="submit">
+  <br>
+  <input type="reset">
+  <br>
+</form>
 
+<a href="#inicio">⬆️<small>Inicio</small></a>
+<hr>
+<h4>Select, Radios, Ckekbox</h4>
+<form >
+  <p>Elige tu idioma</p>
+  <select name="idioma" required>
+    <option value="" selected>Elige una opcion</option>
+    <option value="es">Español</option>
+    <option value="en">Ingles</option>
+    <option value="fr">Frances</option>
+    <option value="po">Portugues</option>
+    <option value="ger">Aleman</option>
+  </select>
+  <p>Elige tu lenguaje de programación favorito</p>
+  <!-- el name debe ser el mismo en todos -->
+  <input type="radio" name="lenguaje" id="radio-js" value="js"  required>
+  <label for="radio-js">Javascript</label>
+  <input type="radio" name="lenguaje" id="radio-php" value="php" checked>
+  <label for="radio-php">Php</label>
+  <input type="radio" name="lenguaje" id="radio-py" value="py">
+  <label for="radio-py">Python</label>
+  <p>Elige tus intereses</p>
+  <label>
+    <input type="checkbox" name="intereses" value="deportes">
+    Deportes
+  </label>
+  <label>
+    <input type="checkbox" name="intereses" value="finanzas">
+    Finanzas
+  </label>
+  <label>
+    <input type="checkbox" name="intereses" value="politica">
+    Política
+  </label>
+  <label>
+    <input type="checkbox" name="intereses" value="ecologia">
+    Ecología
+  </label>
+  <label>
+    <input type="checkbox" name="intereses" value="tecnologia">
+    Tecnología
+  </label>
+  <p>
+    <label>
+      <input type="checkbox" name="terminos" required>
+      ¿Aceptas los terminos y condiciones?
+    </label>
+  </p>
+  <br>
+  <input type="submit">
+  <input type="reset">
+</form>
+<h4>Formulario de contacto</h4>
+<br>
+<form action="https://formsubmit.co/natalia.hilarion1231@gmail.com" method="POST">
+  <input type="text" name="nombre" placeholder="escribe tu nombre" pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$" title="Nombre solo acepta letras y espacios en blanco" required>
+  <br>
+  <input type="email" name="correo" placeholder="ejemplo@gmail.com" pattern="^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$" required title="Formato de correo Invalido">
+  <br>
+  <textarea name="comentarios" cols="30" rows="10" required></textarea>
+  <br>
+  <input type="submit">
 
-
+</form>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
