@@ -2,7 +2,6 @@ html{
   scroll-behavior: smooth;
 }
 
-
 body{
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -74,3 +73,94 @@ iframe{
 input{
   margin-top: 3px;
 }
+
+/* -------COntact Form -------------*/
+
+.contact-form{
+  --form-ok-color: #4caf50;
+  --form-error-color: #f44336;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.contact-form > *{
+  padding: 0.5rem;
+  margin-top: 1rem;
+  display: block;
+  width: 50%;
+}
+
+.contact-form textarea{
+  resize: none;
+}
+
+.contact-form legend,
+.contact-form-response{
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea{
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+.contact-form input[type="submit"]{
+  width: 50%;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: .5rem;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form input[type="submit"]:hover {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.contact-form *::placeholder{
+  color: rgb(4, 40, 83);
+}
+
+.contact-form [required]:valid{
+  border: thin solid var(--form-ok-color)
+}
+
+.contact-form [required]:invalid{
+  border: thin solid var(--form-error-color)
+}
+
+.contact-form-error{
+  margin-top: -1rem;
+  font-size: 80%;
+  color: #fff;
+  transition: all 8000ms ease;
+}
+
+.contact-form-error.is-active{
+  display: block;
+  animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none{
+  display: none;
+}
+
+@keyframes show-message{
+  0%{
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100%{
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+
+

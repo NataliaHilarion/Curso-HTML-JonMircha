@@ -8,6 +8,13 @@
   <title>Curso HTML</title>
   <!-- description - No mas de 165 caracteres - Para posicionamiento de la pag en la web -->
   <meta name="description" content="En esta pagina estoy aprendiendo los fundamentos de HTML con JonMircha" />
+  <link rel="canonical" href="http//tudominio.com/la-url-canonica">
+  <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
+  <meta name="theme-color" content="#ff6600">
+  <meta property="og:title" content="Aprendiendo HTML" />
+  <meta property="og:description" content="En esta pagina estoy aprendiendo los fundamentos de HTML con JonMircha" />
+  <meta property="og:image" content="htttps://https://github.com/NataliaHilarion/Curso-HTML-JonMircha/img/tabla-periodica-elementos-HTML.png" />
+  <meta property="og:url" content="https://github.com/NataliaHilarion/Curso-HTML-JonMircha/index.html" />
   <link rel="stylesheet" href="assets/estilos.css">
   <style>
     h2{
@@ -21,7 +28,7 @@
       ALt + Shift + A = Comentar codigo
       Alt + Shift + F = Indentar Codigo
     -->
-  <h2 id="inicio">Introducción a HTML</h2>
+  <h2 id="inicio">Aprendiendo HTML</h2>
   <p>
     HTML (HyperText Markup Language) es el lenguaje estándar para crear y estructurar páginas web. Utiliza una serie de elementos y etiquetas que describen el contenido y la estructura de una página, como encabezados, párrafos, enlaces, imágenes, y formularios.
   </p>
@@ -49,6 +56,9 @@
     <li><a href="#iframe"> Etiqueta Iframe</a></li>
     <li><a href="#elementos-formulario"> Elementos de Formularios </a></li>
     <li><a href="#formulario">Formularios </a></li>
+    <li><a href="#data-attribute">Data Attribute </a></li>
+    <li><a href="#meta-seo">Metaetiquetas para SEO </a></li>
+    <li><a href="#meta-redes">Metaetiquetas para Redes Sociales </a></li>
   </ul>
   <hr>
 
@@ -588,16 +598,87 @@
 </form>
 <h4>Formulario de contacto</h4>
 <br>
-<form action="https://formsubmit.co/natalia.hilarion1231@gmail.com" method="POST">
-  <input type="text" name="nombre" placeholder="escribe tu nombre" pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$" title="Nombre solo acepta letras y espacios en blanco" required>
-  <br>
-  <input type="email" name="correo" placeholder="ejemplo@gmail.com" pattern="^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$" required title="Formato de correo Invalido">
-  <br>
-  <textarea name="comentarios" cols="30" rows="10" required></textarea>
-  <br>
-  <input type="submit">
-
+<!-- <form action="https://formsubmit.co/natalia.hilarion1231@gmail.com" method="POST"> -->
+<form class="contact-form">
+  <legend> Envianos tus comentarios  </legend>
+  <input type="text" id="name" name="nombre" placeholder="Escribe tu nombre" pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$" title="Nombre solo acepta letras y espacios en blanco" required>
+  <input type="email" id="email" name="correo" placeholder="ejemplo@gmail.com" pattern="^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$" required title="Formato de correo Invalido">
+  <textarea id="comentarios" name="comentarios" cols="30" rows="10" required title="Tu comentario no debe exceder los 250 caracteres" placeholder="Escribe tus comentarios" dara-pattern="^.{1,255}$"></textarea>
+  <input type="submit" value="Enviar">
+  <div class="contact-form-loader none" >
+    <img src="img/loader.svg" alt="cargando">
+  </div>
+  <div class="contact-form-response none" >
+    <p>Los datos han sido enviados</p>
+  </div>
 </form>
+<br>
+<a href="#inicio">⬆️<small>Inicio</small></a>
+<hr>
+<h2 id="data-attribute">Data Attribute</h2>
+<p>Un data attribute es un atributo personalizado en HTML que permite almacenar información adicional en elementos sin afectar su apariencia o comportamiento. Los data attributes se definen con el prefijo data- seguido de un nombre personalizado, por ejemplo, data-producto-id="12345". Esta información se puede utilizar en scripts, como JavaScript, para acceder a datos específicos asociados con un elemento sin necesidad de usar clases o IDs adicionales.</p>
+<pre>
+  <code>
+    &lt;ul type=&quot;square&quot;&gt;
+      &lt;li data-id=&quot;1&quot; data-name=&quot;Spring&quot;&gt;Primavera&lt;/li&gt;
+      &lt;li data-id=&quot;2&quot; data-name=&quot;Summer&quot;&gt;Verano&lt;/li&gt;
+      &lt;li data-id=&quot;3&quot; data-name=&quot;Autumn&quot;&gt;Otoño&lt;/li&gt;
+      &lt;li data-id=&quot;4&quot; data-name=&quot;Winter&quot;&gt;Invierno&lt;/li&gt;
+    &lt;/ul&gt;
+  </code>
+</pre>
+<ul type="square">
+  <li data-id="1" data-name="Spring">Primavera</li>
+  <li data-id="2" data-name="Summer">Verano</li>
+  <li data-id="3" data-name="Autumn">Otoño</li>
+  <li data-id="4" data-name="Winter">Invierno</li>
+</ul>
+<p>
+  Estos atributos son especialmente útiles para hacer el código HTML más semántico y manejable, ya que permiten agregar metadatos directamente en los elementos. En lugar de depender de identificadores globales, los data attributes facilitan la gestión y manipulación de datos contextualizados en aplicaciones web, brindando una solución limpia y flexible para almacenar y acceder a información específica de cada elemento.
+</p>
+<a href="#inicio">⬆️<small>Inicio</small></a>
+<hr>
+<h2 id="meta-seo">Metaetiquetas para SEO</h2>
+<ol>
+    <li><strong>Meta Title:</strong> Es el título de la página que aparece en los resultados de búsqueda; debe ser relevante, contener palabras clave y estar limitado a 60 caracteres.</li>
+    <li><strong>Meta Description:</strong> Resumen breve de la página que se muestra en los resultados de búsqueda; debe incluir palabras clave y tener entre 150 y 160 caracteres.</li>
+    <li><strong>Meta Robots:</strong> Indica a los motores de búsqueda cómo indexar la página; puede incluir valores como <i>index</i> o <i>noindex</i>, y <i>follow</i> o <i>nofollow</i>.</li>
+    <li><strong>Canonical Tag:</strong> Ayuda a evitar contenido duplicado señalando la URL preferida cuando existen varias versiones de la misma página.</li>
+    <li><strong>Meta Viewport:</strong> Esencial para el diseño responsive, asegura que la página se muestra correctamente en dispositivos móviles, ajustando su escala y ancho.</li>
+    <li><strong>Favicon:</strong> Aunque no afecta directamente al SEO, el favicon (icono del sitio web) mejora la experiencia del usuario al hacer que el sitio sea fácilmente identificable en las pestañas del navegador.</li>
+    <li><strong>Meta Theme-Color:</strong> Permite definir el color de la barra de herramientas del navegador en dispositivos móviles, mejorando la integración visual del sitio con el sistema operativo del usuario.</li>
+</ol>
+<br>
+<a href="#inicio">⬆️<small>Inicio</small></a>
+<hr>
+<h2 id="meta-redes">Metaetiquetas para Redes Sociales</h2>
+
+<h1>Basic Metadata</h1>
+  <p>
+    El protocolo Open Graph permite que cualquier página web se convierta en un objeto enriquecido dentro de un gráfico social. Por ejemplo, esto se utiliza en Facebook para permitir que cualquier página web tenga la misma funcionalidad que cualquier otro objeto en Facebook.
+  </p>
+    <p>Para convertir tus páginas web en objetos gráficos, necesitas agregar metadatos básicos a tu página. Hemos basado la versión inicial del protocolo en RDFa, lo que significa que deberás colocar etiquetas <strong>&lt;meta&gt;</strong> adicionales en la <strong>&lt;head&gt;</strong> de tu página web. Las cuatro propiedades requeridas para cada página son:</p>
+    <ul>
+        <li><strong>og:title</strong> - El título de tu objeto tal como debería aparecer dentro del gráfico, por ejemplo, "The Rock".</li>
+        <li><strong>og:type</strong> - El tipo de tu objeto, por ejemplo, "video.movie". Dependiendo del tipo que especifiques, otras propiedades también pueden ser necesarias.</li>
+        <li><strong>og:image</strong> - Una URL de imagen que debería representar tu objeto dentro del gráfico.</li>
+        <li><strong>og:url</strong> - La URL canónica de tu objeto que se usará como su ID permanente en el gráfico, por ejemplo, "https://www.imdb.com/title/tt0117500/".</li>
+    </ul>
+    <p>Como ejemplo, el siguiente es el marcado del protocolo Open Graph para The Rock en IMDB:</p>
+
+    <pre>
+      <code>
+  &lt;head&gt;
+    &lt;title&gt;The Rock (1996)&lt;/title&gt;
+    &lt;meta property="og:title" content="The Rock" /&gt;
+    &lt;meta property="og:type" content="video.movie" /&gt;
+    &lt;meta property="og:url" content="https://www.imdb.com/title/tt01/" /&gt;
+    &lt;meta property="og:image" content="https://ia.media.com/img/rock.jpg" /&gt;
+  &lt;/head&gt;
+</code></pre>
+<br>
+<a href="#inicio">⬆️<small>Inicio</small></a>
+
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
