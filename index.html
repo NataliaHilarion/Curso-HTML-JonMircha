@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Title - Entre 55 y 65 caracteres -->
-  <title>Curso HTML</title>
+  <title>Aprendiendo HTML</title>
   <!-- description - No mas de 165 caracteres - Para posicionamiento de la pag en la web -->
   <meta name="description" content="En esta pagina estoy aprendiendo los fundamentos de HTML con JonMircha" />
   <link rel="canonical" href="http//tudominio.com/la-url-canonica">
@@ -59,6 +59,8 @@
     <li><a href="#data-attribute">Data Attribute </a></li>
     <li><a href="#meta-seo">Metaetiquetas para SEO </a></li>
     <li><a href="#meta-redes">Metaetiquetas para Redes Sociales </a></li>
+    <li><a href="#accesibilidad-web">Accesibilidad Web </a></li>
+    <li><a href="#atributos-role-aria">Atributos Role y Aria </a></li>
   </ul>
   <hr>
 
@@ -678,17 +680,72 @@
 </code></pre>
 <br>
 <a href="#inicio">⬆️<small>Inicio</small></a>
+<hr>
+<h2 id="accesibilidad-web">Accesibilidad Web</h2>
+<h3 role="">Las estaciones del año</h3>
+<ul role="list">
+  <li role="listitem">Primavera</li>
+  <li role="listitem">Verano</li>
+  <li role="listitem">Otoño</li>
+  <li role="listitem">Invierno</li>
+</ul>
+<a role="link" aria-label="En este enlace encontratras mas informacion sobre las estaciones del año" href="#" target="_blank">Para mas información</a>
+<br>
+<h2 id="atributos-role-aria">Atributos Role y Aria</h2>
+Tanto los atributos aria como los atributos role en HTML son útiles para mejorar la accesibilidad, pero sirven para propósitos ligeramente diferentes y se usan de manera complementaria. Aquí tienes una comparación para ayudarte a decidir cuándo usar cada uno:
 
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
+<h3>Atributo Role</h3>
+<ul>
+  <li>
+    <strong>Propósito:</strong>Los atributos role definen el propósito de un elemento en la página. Ayudan a los usuarios de tecnologías asistivas a entender el papel del elemento y cómo interactuar con él.
+  </li>
+  <li>
+    <strong>Uso: </strong>Se utilizan para definir la función de un elemento cuando no se puede lograr con HTML semántico. Por ejemplo, role="button" puede usarse en un <i>div</i> para que sea tratado como un botón por lectores de pantalla.
+  </li>
+  <li>
+    <strong>Cuando usarlo:</strong>Usa role cuando un elemento HTML no tiene un propósito semántico claro o cuando necesitas especificar una función que no se alinea directamente con los elementos semánticos de HTML.
+  </li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<pre>
+  <code>
+    &lt;div role="button" tabindex="0"&gt;Haz clic aquí&lt;/div&gt;
+  </code>
+</pre>
+<h3>Atributo Aria - Accessible Rich Internet Applications (Aplicaciones Ricas de Internet Accesibles)</h3>
+<ul>
+  <li><strong>Propósito:</strong> Los atributos ARIA (Accessible Rich Internet Applications) proporcionan información adicional sobre la accesibilidad que no se puede expresar a través de HTML solo. Esto incluye el estado, la propiedad y la relación de los elementos.</li>
+  <li><strong>Uso:</strong> Se usan para mejorar la accesibilidad de aplicaciones web dinámicas, proporcionar información adicional sobre el estado o las propiedades del contenido, y describir elementos de manera más detallada.</li>
+  <li><strong>Cuando usarlo:</strong>
+  Usa aria cuando necesites proporcionar información adicional sobre el estado o las propiedades de los elementos que no se puede expresar solo con HTML. Es útil para aplicaciones interactivas complejas donde los roles no son suficientes.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+    <pre>
+      <code>
+        &lt;button aria-pressed="true"&gt;Toggle&lt;/button&gt;
+      </code>
+    </pre>
+<h3>Buenas prácticas</h3>
+<ol>
+  <li><strong>HTML Semántico Primero: </strong> Siempre que sea posible, utiliza HTML semántico para expresar el significado y la función de los elementos. Por ejemplo, usa <strong>button</strong> en lugar de: <i> div role="button"</i>.</li>
+  <li><strong>Roles y ARIA en Complemento: </strong> Usa <strong>role</strong> y <strong>aria</strong> para mejorar la accesibilidad cuando el HTML semántico no sea suficiente. Estos atributos son más útiles en casos donde el HTML estándar no proporciona toda la información necesaria.</li>
+  <li><strong>Evita el Abuso de ARIA:</strong> No uses <i>aria</i> para corregir problemas que podrían solucionarse con un HTML semántico adecuado. Además, evita el uso excesivo de ARIA que pueda llevar a una sobrecarga de información para los usuarios de tecnologías asistivas.</li>
+</ol>
+<p>En resumen, el uso de atributos <strong>role</strong> y <strong>aria</strong> depende del contexto y de lo que necesites lograr en términos de accesibilidad. Comienza con HTML semántico y complementa con role y aria según sea necesario para proporcionar una experiencia más completa y accesible.</p>
+<a href="#inicio">⬆️<small>Inicio</small></a>
+<br> <br>
+<footer>
+  <div class="company-info">
+    <p>&copy; 2024 Fin de la introducción a HTML</p>
+  </div>
+</footer>
 
 
 <script>
   console.log("Hola desde el mismo HTML console.log")
 </script>
 <script src="assets/codigos.js"></script>
+
 </body>
 
 </html>
